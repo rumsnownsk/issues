@@ -1,0 +1,185 @@
+body {
+    font-family: "Nunito", sans-serif;
+}
+
+p, h1, h2,h3,h4,h5,h6{
+    margin: 0;
+    padding: 0;
+}
+
+.container h3{
+
+}
+
+i{
+    width: 15px;
+}
+
+a.disabled {
+    pointer-events: none;
+    /*cursor: default;*/
+    /*color: #888;*/
+}
+
+.currentSort{
+    background-color: #23527c;
+    pointer-events: none;
+    color: white;
+}
+
+table tr, table th {
+    text-align: center;
+}
+
+.head_table{
+    display: flex;
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+
+.head_table h3 {
+    width: 100%;
+    text-align: center;
+}
+
+.head_table .somebth{
+    width: max-content;
+    display: flex;
+    height: max-content;
+    align-self: center;
+    justify-content: end;
+    margin-right: 10px;
+}
+
+a.btn_add_issue{
+    margin-left: auto;
+    display: block;
+    width: 100px;
+}
+
+.tasks_pagination {
+    margin: 20px auto;
+    text-align: center;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+}
+
+.hidden {
+    display: none;
+}
+
+label.label_publish {
+    color: #000;
+    cursor: pointer;
+    font-weight: normal;
+    line-height: 30px;
+    padding: 10px 0;
+    vertical-align: middle;
+}
+
+label.label_publish:before {
+    content: " ";
+    color: #000;
+    display: inline-block;
+    font: 20px/30px FontAwesome;
+    margin-right: 15px;
+    position: relative;
+    text-align: center;
+    text-indent: 0px;
+    width: 30px;
+    height: 30px;
+    background: #FFF;
+    border: 1px solid #e3e3e3;
+    border-image: initial;
+    vertical-align: middle;
+    cursor:pointer;
+}
+
+input[type="checkbox"]{
+    display: none;
+}
+
+/* вариации внешнего вида в зав-ти от статуса checkbox */
+ /*checked*/
+input#completeIssue:checked + .label_publish:before {
+    content: "\f00c";
+}
+#title_popup{
+    margin-bottom: 15px;
+}
+.popup-fade {
+    display: none;
+}
+.popup-fade:before {
+    content: '';
+    background: #000;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.7;
+    z-index: 9999;
+}
+.popup {
+    position: fixed;
+    top: 20%;
+    left: 50%;
+    padding: 20px;
+    width: 360px;
+    margin-left: -200px;
+    background: #fff;
+    border: 1px solid orange;
+    border-radius: 4px;
+    z-index: 99999;
+    opacity: 1;
+}
+.popup-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.overlay_modal{
+    z-index: 999;
+}
+
+.admin_panel{
+    display: flex;
+    justify-content: end;
+    height: 30px;
+    background-color: #F2F2F2;
+}
+
+.admin_panel a{
+    display: block;
+    text-decoration: none;
+    height: max-content;
+    align-self: center;
+    margin-right: 30px;
+}
+
+.admin_panel a:hover{
+    text-decoration: none;
+}
+
+.admin_panel p{
+    height: max-content;
+    align-self: center;
+    margin-right: 30px;
+}
+
+td.checkTd{
+    vertical-align: middle !important;
+}
+
+.fa-check-circle-o{
+    width: max-content;
+    display: block;
+    font-size: 22px;
+    /*text-align: center;*/
+    margin: auto;
+}
