@@ -30,8 +30,6 @@ $dispatcher = FastRoute\simpleDispatcher(function (RouteCollector $r) {
     $r->addRoute('POST', '/auth', ['app\controllers\AuthController', 'authAjaxAction']);
     $r->addRoute('GET', '/logout', ['app\controllers\AuthController', 'logoutAction']);
 
-    $r->addRoute('GET', '/htmlPagination', ['app\controllers\AjaxController', 'htmlPaginationAction']);
-
     $r->addRoute('GET', '/onetask', ['app\controllers\AjaxController', 'oneTaskAction']);
     $r->addRoute('POST', '/formIssue', ['app\controllers\AjaxController', 'formIssueAction']);
     $r->addRoute('POST', '/deleteIssue', ['app\controllers\AjaxController', 'deleteIssueAction']);
