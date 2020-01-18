@@ -5,8 +5,6 @@ use DI\ContainerBuilder;
 use FastRoute\RouteCollector;
 use League\Plates\Engine;
 
-new core\ErrorHandler();
-
 $containerBuilder = new ContainerBuilder;
 $containerBuilder->addDefinitions([
     Engine::class => function () {

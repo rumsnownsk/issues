@@ -97,9 +97,20 @@ class ErrorHandler
 
     public function logErrors($message = '', $file = '', $line = '')
     {
+        if(!file_exists(ROOT."/temp")){
+            mkdir(ROOT."/temp", 0777, true);
+            chmod(ROOT."/temp", 0777);
+
+            $fp = fopen(ROOT . "/temp/errors.log", "w");
+            fwrite($fp, "!!!is begin!!!\n=======================\n");
+            fclose($fp);
+            chmod(ROOT . "/temp/errors.log", 0777);
+        };
         error_log("[" . date('Y-m-d H:i:s') . "]; Текст: {$message} | Файл: {$file} | Строка: {$line} \n=======================\n",
             3,
             ROOT . "/temp/errors.log");
     }
 
 }
+
+new ErrorHandler();
